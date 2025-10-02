@@ -27,7 +27,7 @@ object dados: Tdados
     object Tcaduserusuario: TWideStringField
       FieldName = 'usuario'
       Origin = 'usuario'
-      Size = 80
+      Size = 30
     end
     object Tcaduseracesso: TIntegerField
       FieldName = 'acesso'
