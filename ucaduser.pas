@@ -18,6 +18,12 @@ type
     DBEdit1: TDBEdit;
     DBLookupComboBox1: TDBLookupComboBox;
     PngBitBtn3: TPngBitBtn;
+    Label1: TLabel;
+    DBEdit2: TDBEdit;
+    Label2: TLabel;
+    Label3: TLabel;
+    Edit1: TEdit;
+    Label4: TLabel;
     procedure PngBitBtn2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);

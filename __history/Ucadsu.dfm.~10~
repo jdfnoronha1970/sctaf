@@ -1,0 +1,68 @@
+object Fcadsu: TFcadsu
+  Left = 0
+  Top = 0
+  Align = alCustom
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'CADASTRO DE SUBUNIDADE'
+  ClientHeight = 311
+  ClientWidth = 672
+  Color = clInfoBk
+  Ctl3D = False
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 672
+    Height = 81
+    ButtonHeight = 75
+    Caption = 'ToolBar1'
+    TabOrder = 0
+    ExplicitWidth = 371
+    object PngBitBtn1: TPngBitBtn
+      Left = 0
+      Top = 0
+      Width = 75
+      Height = 75
+      Caption = '&NOVO'
+      Layout = blGlyphTop
+      TabOrder = 0
+    end
+    object PngBitBtn2: TPngBitBtn
+      Left = 75
+      Top = 0
+      Width = 75
+      Height = 75
+      Caption = '&CANCELAR'
+      Layout = blGlyphTop
+      TabOrder = 1
+    end
+    object PngBitBtn3: TPngBitBtn
+      Left = 150
+      Top = 0
+      Width = 75
+      Height = 75
+      Caption = '&SALVAR'
+      Layout = blGlyphTop
+      TabOrder = 2
+    end
+    object PngBitBtn4: TPngBitBtn
+      Left = 225
+      Top = 0
+      Width = 75
+      Height = 75
+      Caption = 'SAI&R'
+      Layout = blGlyphTop
+      TabOrder = 3
+      OnClick = PngBitBtn4Click
+    end
+  end
+end

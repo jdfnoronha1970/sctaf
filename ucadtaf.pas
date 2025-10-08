@@ -9,21 +9,12 @@ uses
   Vcl.DBCtrls, Vcl.Mask;
 
 type
-  TFcad1taf = class(TForm)
+  TFcadtaf = class(TForm)
     ToolBar1: TToolBar;
     PngBitBtn1: TPngBitBtn;
     PngBitBtn2: TPngBitBtn;
     PngSpeedButton1: TPngSpeedButton;
-    DBGrid1: TDBGrid;
-    DBEdit1: TDBEdit;
-    DBLookupComboBox1: TDBLookupComboBox;
     PngBitBtn3: TPngBitBtn;
-    Label1: TLabel;
-    DBEdit2: TDBEdit;
-    Label2: TLabel;
-    Label3: TLabel;
-    Edit1: TEdit;
-    Label4: TLabel;
     procedure PngBitBtn2Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
@@ -37,7 +28,7 @@ type
   end;
 
 var
-  Fcad1taf: TFcad1taf;
+  Fcadtaf: TFcadtaf;
 
 implementation
 
@@ -45,24 +36,24 @@ implementation
 
 uses udados;
 
-procedure TFcad1taf.FormClose(Sender: TObject; var Action: TCloseAction);
+procedure TFcadtaf.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
  dados.Tcaduser.Active:= false;
  dados.Dcaduser.Enabled:= false;
 end;
 
-procedure TFcad1taf.FormCreate(Sender: TObject);
+procedure TFcadtaf.FormCreate(Sender: TObject);
 begin
  dados.Tcaduser.Active:= true;
  dados.Dcaduser.Enabled:= true;
 
 end;
 
-procedure TFcad1taf.PngBitBtn1Click(Sender: TObject);
+procedure TFcadtaf.PngBitBtn1Click(Sender: TObject);
 begin
   try
     begin
-      dbedit1.SetFocus;
+
       dados.Tcaduser.Append;
     end;
   except
@@ -73,32 +64,32 @@ begin
   end;
 end;
 
-procedure TFcad1taf.PngBitBtn2Click(Sender: TObject);
+procedure TFcadtaf.PngBitBtn2Click(Sender: TObject);
 begin
 close;
 end;
 
-procedure TFcad1taf.PngBitBtn3Click(Sender: TObject);
+procedure TFcadtaf.PngBitBtn3Click(Sender: TObject);
 begin
   try
     begin
       dados.Tcaduser.Post;
       showmessage('Cadastro efetuado');
-      dbedit1.SetFocus;
+      ;
     end;
   except
     begin
       showmessage('Operação inválida');
-      dbedit1.SetFocus;
+
     end;
   end;
 end;
 
-procedure TFcad1taf.PngSpeedButton1Click(Sender: TObject);
+procedure TFcadtaf.PngSpeedButton1Click(Sender: TObject);
 begin
   try
     begin
-      dbedit1.SetFocus;
+
       dados.Tcaduser.Cancel;
     end;
   except

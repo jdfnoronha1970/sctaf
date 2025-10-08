@@ -2,11 +2,12 @@ object Fcadsu: TFcadsu
   Left = 0
   Top = 0
   Align = alCustom
-  BorderStyle = bsNone
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
   Caption = 'CADASTRO DE SUBUNIDADE'
-  ClientHeight = 340
-  ClientWidth = 650
-  Color = clWindow
+  ClientHeight = 311
+  ClientWidth = 672
+  Color = clHighlightText
   Ctl3D = False
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -20,51 +21,47 @@ object Fcadsu: TFcadsu
   object ToolBar1: TToolBar
     Left = 0
     Top = 0
-    Width = 650
+    Width = 672
     Height = 81
-    ButtonHeight = 57
+    ButtonHeight = 75
     Caption = 'ToolBar1'
     TabOrder = 0
-    object BitBtn5: TBitBtn
+    object PngBitBtn1: TPngBitBtn
       Left = 0
       Top = 0
       Width = 75
-      Height = 57
+      Height = 75
       Caption = '&NOVO'
-      TabOrder = 4
+      Layout = blGlyphTop
+      TabOrder = 0
     end
-    object BitBtn4: TBitBtn
+    object PngBitBtn2: TPngBitBtn
       Left = 75
       Top = 0
       Width = 75
-      Height = 57
-      Caption = 'BitBtn1'
-      TabOrder = 3
+      Height = 75
+      Caption = '&CANCELAR'
+      Layout = blGlyphTop
+      TabOrder = 1
     end
-    object BitBtn3: TBitBtn
+    object PngBitBtn3: TPngBitBtn
       Left = 150
       Top = 0
       Width = 75
-      Height = 57
-      Caption = 'BitBtn1'
+      Height = 75
+      Caption = '&SALVAR'
+      Layout = blGlyphTop
       TabOrder = 2
     end
-    object BitBtn2: TBitBtn
+    object PngBitBtn4: TPngBitBtn
       Left = 225
       Top = 0
       Width = 75
-      Height = 57
-      Caption = 'BitBtn1'
-      TabOrder = 1
-    end
-    object BitBtn1: TBitBtn
-      Left = 300
-      Top = 0
-      Width = 75
-      Height = 57
-      Caption = 'SAIR'
-      TabOrder = 0
-      OnClick = BitBtn1Click
+      Height = 75
+      Caption = 'SAI&R'
+      Layout = blGlyphTop
+      TabOrder = 3
+      OnClick = PngBitBtn4Click
     end
   end
 end

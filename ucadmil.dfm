@@ -7,7 +7,7 @@ object Fcadmil: TFcadmil
   Caption = 'CADASTRO DE MILITARES'
   ClientHeight = 283
   ClientWidth = 301
-  Color = clInactiveBorder
+  Color = clHighlightText
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
   Font.Height = -11
@@ -25,7 +25,6 @@ object Fcadmil: TFcadmil
     ButtonHeight = 75
     Caption = 'ToolBar1'
     TabOrder = 0
-    ExplicitLeft = 4
     object PngBitBtn1: TPngBitBtn
       Left = 0
       Top = 0
@@ -6646,32 +6645,5 @@ object Fcadmil: TFcadmil
         CE4D885200DDE13E2CEEC000587E19E21F7E6A1059A426992589C271F90D8F68
         CFCF944A100D0000000049454E44AE426082}
     end
-  end
-  object DBGrid1: TDBGrid
-    Left = 4
-    Top = 151
-    Width = 292
-    Height = 120
-    TabOrder = 1
-    TitleFont.Charset = DEFAULT_CHARSET
-    TitleFont.Color = clWindowText
-    TitleFont.Height = -11
-    TitleFont.Name = 'Tahoma'
-    TitleFont.Style = []
-  end
-  object DBEdit1: TDBEdit
-    Left = 6
-    Top = 112
-    Width = 169
-    Height = 21
-    CharCase = ecUpperCase
-    TabOrder = 2
-  end
-  object DBLookupComboBox1: TDBLookupComboBox
-    Left = 192
-    Top = 112
-    Width = 102
-    Height = 21
-    TabOrder = 3
   end
 end

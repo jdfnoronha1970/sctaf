@@ -23,6 +23,7 @@ type
     Tnacessoid: TFDAutoIncField;
     Tnacessonivel: TWideStringField;
     Tcadusernacesso: TStringField;
+    Tcadusersenha: TWideStringField;
     procedure DataModuleCreate(Sender: TObject);
   private
     { Private declarations }

@@ -6,7 +6,7 @@ uses
   Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
   Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls, Vcl.Imaging.pngimage,
   Vcl.Menus, System.ImageList, Vcl.ImgList, Vcl.ComCtrls, Vcl.StdCtrls,
-  Vcl.Buttons,ShellApi;
+  Vcl.Buttons,ShellApi, Vcl.ExtDlgs;
 
 type
   TFmenu = class(TForm)
@@ -25,11 +25,20 @@ type
     Memo1: TMemo;
     Image2: TImage;
     BitBtn1: TBitBtn;
+    MILITAR1: TMenuItem;
+    AF1: TMenuItem;
+    OpenPictureDialog1: TOpenPictureDialog;
+    Image4: TImage;
+    SavePictureDialog1: TSavePictureDialog;
     procedure SAIR1Click(Sender: TObject);
     procedure SUBUNIDADE1Click(Sender: TObject);
     procedure Timer1Timer(Sender: TObject);
     procedure USURIO1Click(Sender: TObject);
     procedure BitBtn1Click(Sender: TObject);
+    procedure MILITAR1Click(Sender: TObject);
+    procedure AF1Click(Sender: TObject);
+    procedure Image4Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
   private
     { Private declarations }
   public
@@ -43,14 +52,42 @@ implementation
 
 {$R *.dfm}
 
-uses Ucadsu, Ucaduser;
+uses Ucadsu, Ucaduser, ucadmil, ucadtaf;
 
 
+
+procedure TFmenu.AF1Click(Sender: TObject);
+begin
+  Fcadtaf:= TFcadtaf.create (application);
+  Fcadtaf.showmodal;
+  Fcadtaf.free;
+end;
 
 procedure TFmenu.BitBtn1Click(Sender: TObject);
 begin
 ShellExecute(0, 'open', ('C:\Program Files (x86)\SCTAF\arquivos\EB20-D-03.053.pdf'), nil, nil, SW_SHOW);;
 
+end;
+
+procedure TFmenu.FormCreate(Sender: TObject);
+begin
+ Image4.Picture.LoadFromFile('C:\Program Files (x86)\SCTAF\arquivos\om.png');
+end;
+
+procedure TFmenu.Image4Click(Sender: TObject);
+begin
+ OpenPictureDialog1.Execute();
+ Image4.Picture.LoadFromFile(OpenPictureDialog1.FileName);
+ SavePictureDialog1.Execute();
+ Image4.Picture.SaveToFile(SavePictureDialog1.FileName);
+
+end;
+
+procedure TFmenu.MILITAR1Click(Sender: TObject);
+begin
+Fcadmil := TFcadmil.create (application);
+Fcadmil.showmodal;
+Fcadmil.free;
 end;
 
 procedure TFmenu.SAIR1Click(Sender: TObject);

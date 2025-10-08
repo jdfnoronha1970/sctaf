@@ -7,6 +7,7 @@ object dados: Tdados
     Params.Strings = (
       'Database=C:\Program Files (x86)\SCTAF\dados\sctaf.mdb'
       'DriverID=MSAcc')
+    Connected = True
     LoginPrompt = False
     Left = 40
     Top = 16
@@ -41,6 +42,11 @@ object dados: Tdados
       LookupResultField = 'nivel'
       KeyFields = 'acesso'
       Lookup = True
+    end
+    object Tcadusersenha: TWideStringField
+      FieldName = 'senha'
+      Origin = 'senha'
+      Size = 100
     end
   end
   object Dcaduser: TDataSource

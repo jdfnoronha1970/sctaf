@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/16 17:04:50.000.557,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/24 22:11:02.000.623,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/24 22:43:56.000.602,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/25 06:47:35.000.619,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 14:15:52.000.111,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 14:19:14.000.785,C:\Program Files (x86)\SCTAP\umenu.dfm=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>2025/09/28 14:19:14.000.785,C:\Program Files (x86)\SCTAP\umenu.pas=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 14:19:27.000.638,C:\Program Files (x86)\SCTAP\sctaf.dproj=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/09/28 15:53:50.000.445,=C:\Program Files (x86)\SCTAP\Unit2.pas</Transaction>
+    <Transaction>2025/09/28 16:01:12.000.302,C:\Program Files (x86)\SCTAP\Ucadsu.dfm=C:\Program Files (x86)\SCTAP\Unit2.dfm</Transaction>
+    <Transaction>2025/09/28 16:01:12.000.302,C:\Program Files (x86)\SCTAP\Ucadsu.pas=C:\Program Files (x86)\SCTAP\Unit2.pas</Transaction>
+    <Transaction>2025/09/28 20:12:21.000.041,=C:\Program Files (x86)\SCTAP\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 20:13:30.000.940,C:\Program Files (x86)\SCTAP\ucaduser.dfm=C:\Program Files (x86)\SCTAP\Unit1.dfm</Transaction>
+    <Transaction>2025/09/28 20:13:30.000.940,C:\Program Files (x86)\SCTAP\ucaduser.pas=C:\Program Files (x86)\SCTAP\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 22:14:13.000.031,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 22:14:26.000.959,C:\Program Files (x86)\SCTAF\Unit1.pas=C:\Program Files (x86)\SCTAF\udados.pas</Transaction>
+    <Transaction>2025/09/28 22:14:26.000.959,C:\Program Files (x86)\SCTAF\Unit1.dfm=C:\Program Files (x86)\SCTAF\udados.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
