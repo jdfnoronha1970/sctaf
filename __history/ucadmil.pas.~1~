@@ -1,0 +1,106 @@
+unit ucadmil;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ToolWin,
+  Vcl.ComCtrls, PngBitBtn, PngSpeedButton, Data.DB, Vcl.Grids, Vcl.DBGrids,
+  Vcl.DBCtrls, Vcl.Mask;
+
+type
+  TFcaduser1 = class(TForm)
+    ToolBar1: TToolBar;
+    PngBitBtn1: TPngBitBtn;
+    PngBitBtn2: TPngBitBtn;
+    PngSpeedButton1: TPngSpeedButton;
+    DBGrid1: TDBGrid;
+    DBEdit1: TDBEdit;
+    DBLookupComboBox1: TDBLookupComboBox;
+    PngBitBtn3: TPngBitBtn;
+    procedure PngBitBtn2Click(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure PngBitBtn1Click(Sender: TObject);
+    procedure PngSpeedButton1Click(Sender: TObject);
+    procedure PngBitBtn3Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fcaduser1: TFcaduser1;
+
+implementation
+
+{$R *.dfm}
+
+uses udados;
+
+procedure TFcaduser1.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+ dados.Tcaduser.Active:= false;
+ dados.Dcaduser.Enabled:= false;
+end;
+
+procedure TFcaduser1.FormCreate(Sender: TObject);
+begin
+ dados.Tcaduser.Active:= true;
+ dados.Dcaduser.Enabled:= true;
+
+end;
+
+procedure TFcaduser1.PngBitBtn1Click(Sender: TObject);
+begin
+  try
+    begin
+      dbedit1.SetFocus;
+      dados.Tcaduser.Append;
+    end;
+  except
+    begin
+      showmessage('Operação Inválida');
+      PngBitBtn1.SetFocus;
+    end;
+  end;
+end;
+
+procedure TFcaduser1.PngBitBtn2Click(Sender: TObject);
+begin
+close;
+end;
+
+procedure TFcaduser1.PngBitBtn3Click(Sender: TObject);
+begin
+  try
+    begin
+      dados.Tcaduser.Post;
+      showmessage('Cadastro efetuado');
+      dbedit1.SetFocus;
+    end;
+  except
+    begin
+      showmessage('Operação inválida');
+      dbedit1.SetFocus;
+    end;
+  end;
+end;
+
+procedure TFcaduser1.PngSpeedButton1Click(Sender: TObject);
+begin
+  try
+    begin
+      dbedit1.SetFocus;
+      dados.Tcaduser.Cancel;
+    end;
+  except
+    begin
+      showmessage('Operação Inválida');
+      PngBitBtn1.SetFocus;
+    end;
+  end;
+end;
+
+end.

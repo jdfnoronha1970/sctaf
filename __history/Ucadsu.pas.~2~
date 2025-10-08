@@ -1,0 +1,36 @@
+unit Ucadsu;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.Buttons, Vcl.ToolWin,
+  Vcl.ComCtrls, PngSpeedButton;
+
+type
+  TFcadsu = class(TForm)
+    ToolBar1: TToolBar;
+    PngSpeedButton1: TPngSpeedButton;
+    PngSpeedButton2: TPngSpeedButton;
+    PngSpeedButton3: TPngSpeedButton;
+    PngSpeedButton4: TPngSpeedButton;
+    procedure BitBtn1Click(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  Fcadsu: TFcadsu;
+
+implementation
+
+{$R *.dfm}
+
+procedure TFcadsu.BitBtn1Click(Sender: TObject);
+begin
+close;
+end;
+
+end.

@@ -1,0 +1,24 @@
+program sctaf;
+
+uses
+  Vcl.Forms,
+  umenu in 'umenu.pas' {Fmenu},
+  Ucadsu in 'Ucadsu.pas' {Fcadsu},
+  udados in 'udados.pas' {dados: TDataModule},
+  ucadmil in 'ucadmil.pas' {Fcadmil},
+  ucad1taf in 'ucad1taf.pas' {Fcaduser1},
+  ucaduser in 'ucaduser.pas' {Fcaduser};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TFmenu, Fmenu);
+  Application.CreateForm(Tdados, dados);
+  Application.CreateForm(TFcadmil, Fcadmil);
+  Application.CreateForm(TFcaduser1, Fcaduser1);
+  Application.CreateForm(TFcaduser1, Fcaduser1);
+  Application.CreateForm(TFcaduser, Fcaduser);
+  Application.Run;
+end.

@@ -1,0 +1,53 @@
+object Fcadsu: TFcadsu
+  Left = 0
+  Top = 0
+  Align = alCustom
+  BorderStyle = bsSingle
+  Caption = 'CADASTRO DE SUBUNIDADE'
+  ClientHeight = 311
+  ClientWidth = 386
+  Color = clInactiveBorder
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ToolBar1: TToolBar
+    Left = 0
+    Top = 0
+    Width = 386
+    Height = 81
+    ButtonHeight = 57
+    Caption = 'ToolBar1'
+    TabOrder = 0
+    ExplicitWidth = 431
+    object PngSpeedButton1: TPngSpeedButton
+      Left = 0
+      Top = 0
+      Width = 23
+      Height = 57
+    end
+    object PngSpeedButton2: TPngSpeedButton
+      Left = 23
+      Top = 0
+      Width = 23
+      Height = 57
+    end
+    object PngSpeedButton3: TPngSpeedButton
+      Left = 46
+      Top = 0
+      Width = 23
+      Height = 57
+    end
+    object PngSpeedButton4: TPngSpeedButton
+      Left = 69
+      Top = 0
+      Width = 23
+      Height = 57
+    end
+  end
+end
