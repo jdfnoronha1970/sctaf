@@ -1,0 +1,163 @@
+unit udados;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MSAcc,
+  FireDAC.Phys.MSAccDef, FireDAC.VCLUI.Wait, FireDAC.Stan.Param, FireDAC.DatS,
+  FireDAC.DApt.Intf, FireDAC.DApt, Data.DB, FireDAC.Comp.DataSet,
+  FireDAC.Comp.Client;
+
+type
+  Tdados = class(TDataModule)
+    conn: TFDConnection;
+    Tcaduser: TFDTable;
+    TcaduserId: TFDAutoIncField;
+    Tcaduserusuario: TWideStringField;
+    Tcaduseracesso: TIntegerField;
+    Dcaduser: TDataSource;
+    Tnacesso: TFDTable;
+    Dacesso: TDataSource;
+    Tnacessoid: TFDAutoIncField;
+    Tnacessonivel: TWideStringField;
+    Tcadusernacesso: TStringField;
+    Tcadusersenha: TWideStringField;
+    Tcadmil: TFDTable;
+    Dcadmil: TDataSource;
+    Tcadmilid: TFDAutoIncField;
+    Tcadmilnguerra: TWideStringField;
+    Tcadmilpg: TSmallintField;
+    Tcadmilsu: TSmallintField;
+    Tcadmilgenero: TSmallintField;
+    Dpg: TDataSource;
+    Tpg: TFDTable;
+    TpgId: TFDAutoIncField;
+    Tpgpg: TWideStringField;
+    Tsu: TFDTable;
+    Dsu: TDataSource;
+    Tsuid: TFDAutoIncField;
+    Tsusu: TWideStringField;
+    Dgen: TDataSource;
+    Tgen: TFDTable;
+    Tgenid: TFDAutoIncField;
+    Tgengenero: TWideStringField;
+    Tcadmilnpg: TStringField;
+    Tcadmilnsu: TStringField;
+    Tcadmilngen: TStringField;
+    Tcadmildn: TSQLTimeStampField;
+    Dtaf: TDataSource;
+    Ttaf: TFDTable;
+    Ttafid: TFDAutoIncField;
+    Ttafordtaf: TSmallintField;
+    Ttafchamada: TSmallintField;
+    Ttafdata: TSQLTimeStampField;
+    Ttafano: TSmallintField;
+    Tord: TFDTable;
+    Tchamada: TFDTable;
+    Dord: TDataSource;
+    Dchamada: TDataSource;
+    Tordid: TFDAutoIncField;
+    Tordordem: TWideStringField;
+    Tchamadaid: TFDAutoIncField;
+    Tchamadachamada: TWideStringField;
+    Ttafnord: TStringField;
+    Ttafnchamada: TStringField;
+    qmil: TFDQuery;
+    dqmil: TDataSource;
+    qord: TFDQuery;
+    qchamada: TFDQuery;
+    dqord: TDataSource;
+    dqchamada: TDataSource;
+    Tresutados: TFDTable;
+    dresultados: TDataSource;
+    Tresutadosid: TFDAutoIncField;
+    Tresutadosmil: TSmallintField;
+    Tresutadostaf: TSmallintField;
+    Tresutadoschamada: TSmallintField;
+    Tresutadoscorrida: TSmallintField;
+    Tresutadosflexao: TSmallintField;
+    Tresutadosabdominal: TSmallintField;
+    Tresutadosbarra: TSmallintField;
+    Tresutadosano: TWideStringField;
+    qrelgeral: TFDQuery;
+    Tresutadossu: TSmallintField;
+    dqrelgeral: TDataSource;
+    qrelgeralid: TFDAutoIncField;
+    qrelgeralmil: TSmallintField;
+    qrelgeraltaf: TSmallintField;
+    qrelgeralchamada: TSmallintField;
+    qrelgeralcorrida: TSmallintField;
+    qrelgeralflexao: TSmallintField;
+    qrelgeralabdominal: TSmallintField;
+    qrelgeralbarra: TSmallintField;
+    qrelgeralano: TWideStringField;
+    qrelgeralsu: TSmallintField;
+    qrelgeralnmil: TStringField;
+    qrelgeralnsu: TStringField;
+    tano: TFDTable;
+    dano: TDataSource;
+    tanoid: TFDAutoIncField;
+    tanoano: TWideStringField;
+    qrelgeralntaf: TStringField;
+    qrelgeralnchamada: TStringField;
+    qrelgeralppm: TWideStringField;
+    Tresutadosppm: TWideStringField;
+    qmilid: TFDAutoIncField;
+    qmilnguerra: TWideStringField;
+    qmilpg: TSmallintField;
+    qmilsu: TSmallintField;
+    qmilgenero: TSmallintField;
+    qmildn: TSQLTimeStampField;
+    qmilnpg: TStringField;
+    qmilnsu: TStringField;
+    qmilngen: TStringField;
+    qpd: TFDQuery;
+    qano: TFDQuery;
+    qanoid: TFDAutoIncField;
+    qanoano: TWideStringField;
+    dqano: TDataSource;
+    Tresutadosmencao: TWideStringField;
+    Tresutadospd: TWideStringField;
+    Tcadmilpd: TSmallintField;
+    qpdid: TFDAutoIncField;
+    qpdpadrao: TWideStringField;
+    dqpd: TDataSource;
+    Tcadmilnpd: TStringField;
+    qmilpd: TSmallintField;
+    qmilnpd: TStringField;
+    qrelgeralmencao: TWideStringField;
+    qrelgeralpd: TWideStringField;
+    qrelgeralnpd: TStringField;
+    qrelgeralidade: TStringField;
+    qaltemil: TFDQuery;
+    dqaltera: TDataSource;
+    procedure DataModuleCreate(Sender: TObject);
+    procedure dqalteraUpdateData(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dados: Tdados;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure Tdados.DataModuleCreate(Sender: TObject);
+begin
+ dados.conn.Connected:= true;
+end;
+
+procedure Tdados.dqalteraUpdateData(Sender: TObject);
+begin
+;
+end;
+
+end.

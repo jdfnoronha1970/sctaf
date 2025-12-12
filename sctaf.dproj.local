@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2025/05/16 17:04:50.000.557,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/24 22:11:02.000.623,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/24 22:43:56.000.602,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/25 06:47:35.000.619,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 14:15:52.000.111,=C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 14:19:14.000.785,C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Program Files (x86)\SCTAP\umenu.pas</Transaction>
+    <Transaction>2025/09/28 14:19:14.000.785,C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Program Files (x86)\SCTAP\umenu.dfm</Transaction>
+    <Transaction>2025/09/28 14:19:27.000.638,C:\Users\DARIO\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Program Files (x86)\SCTAP\sctaf.dproj</Transaction>
+    <Transaction>2025/09/28 15:53:50.000.445,=C:\Program Files (x86)\SCTAP\Unit2.pas</Transaction>
+    <Transaction>2025/09/28 16:01:12.000.302,C:\Program Files (x86)\SCTAP\Unit2.pas=C:\Program Files (x86)\SCTAP\Ucadsu.pas</Transaction>
+    <Transaction>2025/09/28 16:01:12.000.302,C:\Program Files (x86)\SCTAP\Unit2.dfm=C:\Program Files (x86)\SCTAP\Ucadsu.dfm</Transaction>
+    <Transaction>2025/09/28 20:12:21.000.041,=C:\Program Files (x86)\SCTAP\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 20:13:30.000.940,C:\Program Files (x86)\SCTAP\Unit1.dfm=C:\Program Files (x86)\SCTAP\ucaduser.dfm</Transaction>
+    <Transaction>2025/09/28 20:13:30.000.940,C:\Program Files (x86)\SCTAP\Unit1.pas=C:\Program Files (x86)\SCTAP\ucaduser.pas</Transaction>
+    <Transaction>2025/09/28 22:14:13.000.031,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/09/28 22:14:26.000.959,C:\Program Files (x86)\SCTAF\udados.dfm=C:\Program Files (x86)\SCTAF\Unit1.dfm</Transaction>
+    <Transaction>2025/09/28 22:14:26.000.959,C:\Program Files (x86)\SCTAF\udados.pas=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/10/05 18:37:12.000.234,C:\Program Files (x86)\SCTAF\ucaduser.dfm=C:\Program Files (x86)\SCTAF\ucaduser1.dfm</Transaction>
+    <Transaction>2025/10/05 18:37:12.000.234,C:\Program Files (x86)\SCTAF\ucaduser.pas=C:\Program Files (x86)\SCTAF\ucaduser1.pas</Transaction>
+    <Transaction>2025/10/05 18:37:51.000.590,C:\Program Files (x86)\SCTAF\ucaduser1.pas=C:\Program Files (x86)\SCTAF\ucadmil.pas</Transaction>
+    <Transaction>2025/10/05 18:37:51.000.590,C:\Program Files (x86)\SCTAF\ucaduser1.dfm=C:\Program Files (x86)\SCTAF\ucadmil.dfm</Transaction>
+    <Transaction>2025/10/05 18:39:47.000.150,=C:\Program Files (x86)\SCTAF\ucaduser.pas</Transaction>
+    <Transaction>2025/10/07 08:26:52.000.455,C:\Program Files (x86)\SCTAF\ucaduser.pas=C:\Program Files (x86)\SCTAF\ucaduser1.pas</Transaction>
+    <Transaction>2025/10/07 08:26:52.000.455,C:\Program Files (x86)\SCTAF\ucaduser.dfm=C:\Program Files (x86)\SCTAF\ucaduser1.dfm</Transaction>
+    <Transaction>2025/10/07 08:28:01.000.129,=C:\Program Files (x86)\SCTAF\ucaduser.pas</Transaction>
+    <Transaction>2025/10/07 08:32:20.000.158,C:\Program Files (x86)\SCTAF\ucaduser1.dfm=C:\Program Files (x86)\SCTAF\ucad1taf.dfm</Transaction>
+    <Transaction>2025/10/07 08:32:20.000.158,C:\Program Files (x86)\SCTAF\ucaduser1.pas=C:\Program Files (x86)\SCTAF\ucad1taf.pas</Transaction>
+    <Transaction>2025/10/07 08:40:48.000.921,C:\Program Files (x86)\SCTAF\ucad1taf.dfm=C:\Program Files (x86)\SCTAF\ucadtaf.dfm</Transaction>
+    <Transaction>2025/10/07 08:40:48.000.921,C:\Program Files (x86)\SCTAF\ucad1taf.pas=C:\Program Files (x86)\SCTAF\ucadtaf.pas</Transaction>
+    <Transaction>2025/10/07 21:47:25.000.371,=C:\Program Files (x86)\SCTAF\ucadmil.pas</Transaction>
+    <Transaction>2025/10/07 21:48:31.000.867,=C:\Program Files (x86)\SCTAF\ucadtaf.pas</Transaction>
+    <Transaction>2025/10/07 21:52:18.000.908,C:\Program Files (x86)\SCTAF\ucaduser.pas=</Transaction>
+    <Transaction>2025/10/07 21:52:32.000.291,C:\Program Files (x86)\SCTAF\ucadtaf.dfm=C:\Program Files (x86)\SCTAF\ucaduser.dfm</Transaction>
+    <Transaction>2025/10/07 21:52:32.000.291,C:\Program Files (x86)\SCTAF\ucadtaf.pas=C:\Program Files (x86)\SCTAF\ucaduser.pas</Transaction>
+    <Transaction>2025/10/07 22:12:56.000.490,=C:\Program Files (x86)\SCTAF\ucadtaf.pas</Transaction>
+    <Transaction>2025/11/22 11:19:36.000.381,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/22 12:03:52.000.923,C:\Program Files (x86)\SCTAF\Unit1.pas=C:\Program Files (x86)\SCTAF\ucadresultado.pas</Transaction>
+    <Transaction>2025/11/22 12:03:52.000.923,C:\Program Files (x86)\SCTAF\Unit1.dfm=C:\Program Files (x86)\SCTAF\ucadresultado.dfm</Transaction>
+    <Transaction>2025/11/23 16:40:34.000.239,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/23 16:41:22.000.059,=C:\Program Files (x86)\SCTAF\ABOUT.pas</Transaction>
+    <Transaction>2025/11/23 16:47:29.000.900,C:\Program Files (x86)\SCTAF\Unit1.pas=C:\Program Files (x86)\SCTAF\urelgeral.pas</Transaction>
+    <Transaction>2025/11/23 16:47:29.000.900,C:\Program Files (x86)\SCTAF\Unit1.dfm=C:\Program Files (x86)\SCTAF\urelgeral.dfm</Transaction>
+    <Transaction>2025/11/23 23:24:02.000.604,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/23 23:25:17.000.377,C:\Program Files (x86)\SCTAF\uano.dfm=C:\Program Files (x86)\SCTAF\Unit1.dfm</Transaction>
+    <Transaction>2025/11/23 23:25:17.000.377,C:\Program Files (x86)\SCTAF\uano.pas=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/27 09:18:04.000.557,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/27 09:20:09.000.342,C:\Program Files (x86)\SCTAF\uedcadmil.dfm=C:\Program Files (x86)\SCTAF\Unit1.dfm</Transaction>
+    <Transaction>2025/11/27 09:20:09.000.342,C:\Program Files (x86)\SCTAF\uedcadmil.pas=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/29 21:55:59.000.862,=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/29 22:09:31.000.263,C:\Program Files (x86)\SCTAF\UFatualizadn.pas=C:\Program Files (x86)\SCTAF\Unit1.pas</Transaction>
+    <Transaction>2025/11/29 22:09:31.000.263,C:\Program Files (x86)\SCTAF\UFatualizadn.dfm=C:\Program Files (x86)\SCTAF\Unit1.dfm</Transaction>
+  </Transactions>
+</BorlandProject>
