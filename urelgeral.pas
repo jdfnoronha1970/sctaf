@@ -14,12 +14,11 @@ type
     DBLookupComboBox1: TDBLookupComboBox;
     Label1: TLabel;
     PngBitBtn2: TPngBitBtn;
+    DBGrid2: TDBGrid;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure PngBitBtn1Click(Sender: TObject);
     procedure PngBitBtn2Click(Sender: TObject);
-    procedure DBGrid1DrawDataCell(Sender: TObject; const [Ref] Rect: TRect;
-      Field: TField; State: TGridDrawState);
     procedure FormActivate(Sender: TObject);
   private
     { Private declarations }
@@ -41,16 +40,6 @@ implementation
 
 {$R *.dfm}
 uses udados;
-
-procedure Tfresgeral.DBGrid1DrawDataCell(Sender: TObject;
-  const [Ref] Rect: TRect; Field: TField; State: TGridDrawState);
-begin
-
-//  anoa:=  dados.qrelgeralidade.AsDateTime;
- // anob:= decodedate(anoa, year, month, day);
- // anob:= anoa;
- // anob:= decodedate(anoa, year, month, day);
-end;
 
 procedure Tfresgeral.DBLookupComboBox1Click(Sender: TObject);
 var
@@ -87,16 +76,34 @@ begin
   dados.dano.Enabled:= true;
   dados.qmil.Active:= true;
   dados.dqmil.Enabled:= true;
+        with DBGrid1.Columns[2] do // adiciona uma coluna no "fim" da grade (ULTIMA coluna)
+begin
+    FieldName := 'ano';
+    Title.Caption := 'IDADE';
+end;
 
-{
-    with dados.Tcadmil do
-     begin
-        while not eof do
-          begin
-            decodedate(dados.Tcadmildn.AsDateTime, ano, mes, dia);
-           end;
-     end;
-}
+
+  with dados.qrelgeral do
+    begin
+      close;
+      sql.Clear;
+      //sql.Add('select dtnas, Datediff(''yyyy'', dtnas, now() ) as idade from tbresultados');
+    //  sql.Add('select a.id,a.nguerra, a.dn,b.mil, b.taf from tbmil as a RIGHT JOIN tbresultados as b on a.id = b.mil');
+     ///sql.Add('select a.id from tbsu as a right join tbmil as m on m.su=a.id right join tbresultados as r on m.id = r.mil');
+      sql.Add('SELECT m.nguerra, m.genero, m.dn, m.pd, dateDiff(''yyyy'', dn,now()) as ano, r.taf, r.chamada, r.corrida, r.flexao, r.abdominal, r.barra, r.ppm, r.ano, s.su, p.pg');
+      sql.Add('FROM ((tbresultados AS r LEFT JOIN tbmil AS m ON r.[mil] = m.[id]) LEFT JOIN tbsu AS s ON s.[id] = m.[su]) LEFT JOIN tbpg AS p ON p.[id] = m.[pg]');
+
+      dbgrid2.Columns[0].Field:= dados.qmilnguerra;
+      dbgrid2.Columns[1].Field:= dados.qmilsu;
+      dbgrid1.Columns[0].Field:= dados.qmilnguerra;
+      dbgrid1.Columns[1].Field:= dados.qmilsu;
+     // sql.Add('select dtnas from tbresultados');
+      open;
+    end;
+
+
+
+
 end;
 
 procedure Tfresgeral.PngBitBtn1Click(Sender: TObject);

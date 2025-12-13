@@ -6,7 +6,7 @@ object fresgeral: Tfresgeral
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'RELAT'#211'RIO GERAL'
-  ClientHeight = 551
+  ClientHeight = 728
   ClientWidth = 984
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -73,19 +73,17 @@ object fresgeral: Tfresgeral
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = [fsBold]
-    OnDrawDataCell = DBGrid1DrawDataCell
     Columns = <
       item
         Expanded = False
-        FieldName = 'nmil'
         Title.Alignment = taCenter
         Title.Caption = 'MILITAR'
+        Width = 120
         Visible = True
       end
       item
         Alignment = taCenter
         Expanded = False
-        FieldName = 'nsu'
         Title.Alignment = taCenter
         Title.Caption = 'SUBUNIDADE'
         Width = 80
@@ -94,7 +92,6 @@ object fresgeral: Tfresgeral
       item
         Alignment = taCenter
         Expanded = False
-        FieldName = 'idade'
         Title.Alignment = taCenter
         Title.Caption = 'IDADE'
         Width = 60
@@ -1809,5 +1806,34 @@ object fresgeral: Tfresgeral
       5F53903166B8CB83ACB4A8EFD025037DA05CA549EC0EC40144266203A9391E67
       CE4D885200DDE13E2CEEC000587E19E21F7E6A1059A426992589C271F90D8F68
       CFCF944A100D0000000049454E44AE426082}
+  end
+  object DBGrid2: TDBGrid
+    Left = 224
+    Top = 568
+    Width = 320
+    Height = 120
+    DataSource = dados.dqrelgeral
+    TabOrder = 4
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+    Columns = <
+      item
+        Alignment = taCenter
+        Expanded = False
+        ReadOnly = True
+        Title.Alignment = taCenter
+        Title.Caption = 'Militar'
+        Width = 120
+        Visible = True
+      end
+      item
+        Expanded = False
+        Title.Caption = 'SUBUNIDADE'
+        Width = 120
+        Visible = True
+      end>
   end
 end
