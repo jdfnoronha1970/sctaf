@@ -114,6 +114,8 @@ type
     qmilnpd: TStringField;
     qaltemil: TFDQuery;
     dqaltera: TDataSource;
+    dfaixaidade: TDataSource;
+    qfaixaidade: TFDQuery;
     procedure DataModuleCreate(Sender: TObject);
     procedure dqalteraUpdateData(Sender: TObject);
   private

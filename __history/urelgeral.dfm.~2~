@@ -93,13 +93,16 @@ object fresgeral: Tfresgeral
         Alignment = taCenter
         Expanded = False
         Title.Alignment = taCenter
+        Title.Caption = 'IDADE'
+        Width = 60
         Visible = True
       end
       item
-        Alignment = taCenter
+        Alignment = taRightJustify
         Expanded = False
+        FieldName = 'npd'
         Title.Alignment = taCenter
-        Title.Caption = 'IDADE'
+        Title.Caption = 'PD'
         Width = 60
         Visible = True
       end
@@ -178,7 +181,11 @@ object fresgeral: Tfresgeral
         Visible = False
       end
       item
+        Alignment = taCenter
         Expanded = False
+        FieldName = 'mencao'
+        Title.Alignment = taCenter
+        Title.Caption = 'MEN'#199#195'O'
         Visible = True
       end>
   end
@@ -1828,13 +1835,5 @@ object fresgeral: Tfresgeral
         Width = 120
         Visible = True
       end>
-  end
-  object Edit1: TEdit
-    Left = 632
-    Top = 520
-    Width = 121
-    Height = 21
-    TabOrder = 5
-    Text = 'Edit1'
   end
 end

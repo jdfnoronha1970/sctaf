@@ -178,11 +178,7 @@ object fresgeral: Tfresgeral
         Visible = False
       end
       item
-        Alignment = taCenter
         Expanded = False
-        FieldName = 'mencao'
-        Title.Alignment = taCenter
-        Title.Caption = 'MEN'#199#195'O'
         Visible = True
       end>
   end
@@ -1832,5 +1828,26 @@ object fresgeral: Tfresgeral
         Width = 120
         Visible = True
       end>
+  end
+  object Edit1: TEdit
+    Left = 632
+    Top = 520
+    Width = 121
+    Height = 21
+    TabOrder = 5
+    Text = 'Edit1'
+  end
+  object DBGrid3: TDBGrid
+    Left = 608
+    Top = 568
+    Width = 320
+    Height = 120
+    DataSource = dados.dfaixaidade
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
   end
 end

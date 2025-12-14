@@ -15,7 +15,6 @@ type
     Label1: TLabel;
     PngBitBtn2: TPngBitBtn;
     DBGrid2: TDBGrid;
-    Edit1: TEdit;
     procedure FormCreate(Sender: TObject);
     procedure DBLookupComboBox1Click(Sender: TObject);
     procedure PngBitBtn1Click(Sender: TObject);
@@ -31,8 +30,11 @@ var
   fresgeral:          Tfresgeral;
   anoa:                    tdate;
   anob:               tdatetime;
+//   ano, mes, dia:      integer;
   year, month, day:   word;
-
+//   year, month, day:   integer;
+//   ano, mes, dia:      word;
+//   year, month, day:   double;
 
 implementation
 
@@ -48,12 +50,14 @@ begin
     begin
       close;
       sql.Clear;
-//      sql.Add('select * from tbresultados where ano=:"pesq"');
-      sql.Add('SELECT m.nguerra, m.genero, m.dn, m.pd, dateDiff(''yyyy'', dn,now()) as idade, r.taf as taf, r.chamada as chamada, r.corrida, r.flexao, r.abdominal, r.barra, r.ppm, r.ano, s.su, p.pg, pd.padrao as padrao');
-      sql.Add('FROM (((tbresultados AS r LEFT JOIN tbmil AS m ON r.[mil] = m.[id]) LEFT JOIN tbsu AS s ON s.[id] = m.[su]) LEFT JOIN tbpg AS p ON p.[id] = m.[pg]) LEFT JOIN tbpd as pd ON pd.[id] = m.[pd]  where r.ano=:"pesq"');
+      sql.Add('select * from tbresultados where ano=:"pesq"');
      // Params.ParamByName('pesq').AsString:= pesq;
       Params.ParamValues['pesq']:=pesq;
       open;
+ //     while not eof do
+ //       begin
+ //         anoa:= decodedate(dados.qmildn.AsDateTime, year, month, day);
+ //       end;
     end;
 end;
 
@@ -72,35 +76,12 @@ begin
   dados.dano.Enabled:= true;
   dados.qmil.Active:= true;
   dados.dqmil.Enabled:= true;
+        with DBGrid1.Columns[2] do // adiciona uma coluna no "fim" da grade (ULTIMA coluna)
+begin
+    FieldName := 'ano';
+    Title.Caption := 'IDADE';
+end;
 
-
-  with DBGrid1.Columns[2] do
-    begin
-      FieldName := 'idade';
-      Title.Caption := 'IDADE';
-    end;
-
-  with DBGrid1.Columns[3] do
-    begin
-      FieldName := 'padrao';
-      Title.Caption := 'P DES';
-    end;
-
-  with DBGrid1.Columns[4] do // adiciona uma coluna no "fim" da grade (ULTIMA coluna)
-    begin
-      FieldName := 'taf';
-      Title.Caption := 'TAF';
-    end;
-  with DBGrid1.Columns[5] do // adiciona uma coluna no "fim" da grade (ULTIMA coluna)
-    begin
-      FieldName := 'chamada';
-      Title.Caption := 'CHAMADA';
-    end;
-  with DBGrid1.Columns[13] do // adiciona uma coluna no "fim" da grade (ULTIMA coluna)
-    begin
-     FieldName := 'mencao';
-     Title.Caption := 'MENÇÃO1;
-    end;
 
   with dados.qrelgeral do
     begin
@@ -109,24 +90,15 @@ begin
       //sql.Add('select dtnas, Datediff(''yyyy'', dtnas, now() ) as idade from tbresultados');
     //  sql.Add('select a.id,a.nguerra, a.dn,b.mil, b.taf from tbmil as a RIGHT JOIN tbresultados as b on a.id = b.mil');
      ///sql.Add('select a.id from tbsu as a right join tbmil as m on m.su=a.id right join tbresultados as r on m.id = r.mil');
-      sql.Add('SELECT m.nguerra, m.genero, m.dn, m.pd,   DateDiff(''yyyy'', m.dn, Date()) as idade, r.taf as taf, r.chamada as chamada, r.corrida, r.flexao, r.abdominal, r.barra, r.ppm, r.ano,r.mencao, s.su, p.pg, pd.padrao as padrao');
-      sql.Add('FROM (((tbresultados AS r LEFT JOIN tbmil AS m ON r.[mil] = m.[id]) LEFT JOIN tbsu AS s ON s.[id] = m.[su]) LEFT JOIN tbpg AS p ON p.[id] = m.[pg]) LEFT JOIN tbpd as pd ON pd.[id] = m.[pd]');
+      sql.Add('SELECT m.nguerra, m.genero, m.dn, m.pd, dateDiff(''yyyy'', dn,now()) as ano, r.taf, r.chamada, r.corrida, r.flexao, r.abdominal, r.barra, r.ppm, r.ano, s.su, p.pg');
+      sql.Add('FROM ((tbresultados AS r LEFT JOIN tbmil AS m ON r.[mil] = m.[id]) LEFT JOIN tbsu AS s ON s.[id] = m.[su]) LEFT JOIN tbpg AS p ON p.[id] = m.[pg]');
 
       dbgrid2.Columns[0].Field:= dados.qmilnguerra;
       dbgrid2.Columns[1].Field:= dados.qmilsu;
       dbgrid1.Columns[0].Field:= dados.qmilnguerra;
       dbgrid1.Columns[1].Field:= dados.qmilsu;
-    open;
-           //dados.qrelgeral.FieldByName('ano').Value;
-     if FieldByName('idade').AsInteger > 18 then
-        begin
-         // DBGrid1.Columns[13].Field.asinteger:= 1;
-         dados.qrelgeral.Edit;
-         FieldByName('mencao').AsInteger:= 1;
-        end;
-
-
-
+     // sql.Add('select dtnas from tbresultados');
+      open;
     end;
 
 
