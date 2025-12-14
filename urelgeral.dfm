@@ -1837,4 +1837,17 @@ object fresgeral: Tfresgeral
     TabOrder = 5
     Text = 'Edit1'
   end
+  object DBGrid3: TDBGrid
+    Left = 608
+    Top = 568
+    Width = 320
+    Height = 120
+    DataSource = dados.dfaixaidade
+    TabOrder = 6
+    TitleFont.Charset = DEFAULT_CHARSET
+    TitleFont.Color = clWindowText
+    TitleFont.Height = -11
+    TitleFont.Name = 'Tahoma'
+    TitleFont.Style = []
+  end
 end

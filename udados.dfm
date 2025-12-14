@@ -625,7 +625,7 @@ object dados: Tdados
     SQL.Strings = (
       ''
       'select * from tbmil;')
-    Left = 568
+    Left = 560
     Top = 376
   end
   object dqaltera: TDataSource
@@ -635,5 +635,19 @@ object dados: Tdados
     OnUpdateData = dqalteraUpdateData
     Left = 624
     Top = 376
+  end
+  object dfaixaidade: TDataSource
+    AutoEdit = False
+    DataSet = qfaixaidade
+    Enabled = False
+    Left = 624
+    Top = 432
+  end
+  object qfaixaidade: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbfaixaetaria')
+    Left = 552
+    Top = 432
   end
 end
