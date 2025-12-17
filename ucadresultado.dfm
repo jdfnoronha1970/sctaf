@@ -4,7 +4,7 @@ object Fcadresultados: TFcadresultados
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'CADASTRO DE RESULTADOS'
-  ClientHeight = 465
+  ClientHeight = 719
   ClientWidth = 301
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -14,7 +14,6 @@ object Fcadresultados: TFcadresultados
   Font.Style = []
   OldCreateOrder = False
   Position = poDesktopCenter
-  OnActivate = FormActivate
   PixelsPerInch = 96
   TextHeight = 13
   object Label1: TLabel
@@ -58,7 +57,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label4: TLabel
     Left = 15
-    Top = 218
+    Top = 282
     Width = 52
     Height = 13
     Caption = 'CORRIDA'
@@ -71,7 +70,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label5: TLabel
     Left = 17
-    Top = 244
+    Top = 308
     Width = 41
     Height = 13
     Caption = 'FLEX'#195'O'
@@ -84,7 +83,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label6: TLabel
     Left = 15
-    Top = 270
+    Top = 334
     Width = 67
     Height = 13
     Caption = 'ABDOMINAL'
@@ -97,7 +96,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label7: TLabel
     Left = 15
-    Top = 298
+    Top = 362
     Width = 39
     Height = 13
     Caption = 'BARRA'
@@ -110,7 +109,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label8: TLabel
     Left = 15
-    Top = 324
+    Top = 388
     Width = 24
     Height = 13
     Caption = 'PPM'
@@ -123,7 +122,7 @@ object Fcadresultados: TFcadresultados
   end
   object Label9: TLabel
     Left = 17
-    Top = 350
+    Top = 414
     Width = 23
     Height = 13
     Caption = 'ANO'
@@ -148,8 +147,8 @@ object Fcadresultados: TFcadresultados
     ParentFont = False
   end
   object Label11: TLabel
-    Left = 16
-    Top = 384
+    Left = 8
+    Top = 456
     Width = 46
     Height = 13
     Caption = 'MEN'#199#195'O'
@@ -161,11 +160,37 @@ object Fcadresultados: TFcadresultados
     ParentFont = False
   end
   object Label12: TLabel
-    Left = 16
-    Top = 416
+    Left = 18
+    Top = 201
     Width = 140
     Height = 13
     Caption = 'PADRAO DE DESEMPENHO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label13: TLabel
+    Left = 18
+    Top = 227
+    Width = 77
+    Height = 13
+    Caption = 'ANIVERS'#193'RIO'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 18
+    Top = 252
+    Width = 35
+    Height = 13
+    Caption = 'IDADE'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -184,6 +209,7 @@ object Fcadresultados: TFcadresultados
     ListField = 'nguerra'
     ListSource = dados.dqmil
     TabOrder = 0
+    OnClick = DBLookupComboBox1Click
   end
   object ToolBar1: TToolBar
     Left = 0
@@ -6859,18 +6885,6 @@ object Fcadresultados: TFcadresultados
         CFCF944A100D0000000049454E44AE426082}
     end
   end
-  object DBLookupComboBox2: TDBLookupComboBox
-    Left = 88
-    Top = 119
-    Width = 145
-    Height = 21
-    DataField = 'taf'
-    DataSource = dados.dresultados
-    KeyField = 'id'
-    ListField = 'ordem'
-    ListSource = dados.dqord
-    TabOrder = 2
-  end
   object DBLookupComboBox3: TDBLookupComboBox
     Left = 88
     Top = 145
@@ -6880,62 +6894,64 @@ object Fcadresultados: TFcadresultados
     DataSource = dados.dresultados
     KeyField = 'id'
     ListField = 'chamada'
-    ListSource = dados.dqchamada
-    TabOrder = 3
+    ListSource = dados.Dchamada
+    TabOrder = 2
   end
   object DBEdit1: TDBEdit
     Left = 88
-    Top = 214
-    Width = 121
+    Top = 278
+    Width = 80
     Height = 21
     DataField = 'corrida'
     DataSource = dados.dresultados
-    TabOrder = 4
+    TabOrder = 3
+    OnExit = DBEdit1Exit
+    OnKeyPress = DBEdit1KeyPress
   end
   object DBEdit2: TDBEdit
     Left = 88
-    Top = 240
-    Width = 121
+    Top = 304
+    Width = 80
     Height = 21
     DataField = 'flexao'
     DataSource = dados.dresultados
-    TabOrder = 5
+    TabOrder = 4
   end
   object DBEdit3: TDBEdit
     Left = 88
-    Top = 266
-    Width = 121
+    Top = 330
+    Width = 80
     Height = 21
     DataField = 'abdominal'
     DataSource = dados.dresultados
-    TabOrder = 6
+    TabOrder = 5
   end
   object DBEdit4: TDBEdit
     Left = 88
-    Top = 294
-    Width = 121
+    Top = 357
+    Width = 80
     Height = 21
     DataField = 'barra'
     DataSource = dados.dresultados
-    TabOrder = 7
+    TabOrder = 6
   end
   object DBEdit5: TDBEdit
     Left = 88
-    Top = 320
-    Width = 121
+    Top = 383
+    Width = 80
     Height = 21
     DataField = 'ppm'
     DataSource = dados.dresultados
-    TabOrder = 8
+    TabOrder = 7
   end
   object DBEdit6: TDBEdit
-    Left = 87
-    Top = 347
-    Width = 121
+    Left = 88
+    Top = 409
+    Width = 80
     Height = 21
     DataField = 'ano'
     DataSource = dados.dresultados
-    TabOrder = 9
+    TabOrder = 8
   end
   object DBLookupComboBox4: TDBLookupComboBox
     Left = 87
@@ -6947,6 +6963,121 @@ object Fcadresultados: TFcadresultados
     KeyField = 'id'
     ListField = 'su'
     ListSource = dados.Dsu
+    TabOrder = 9
+  end
+  object DBLookupComboBox5: TDBLookupComboBox
+    Left = 165
+    Top = 197
+    Width = 67
+    Height = 21
+    DataField = 'pd'
+    DataSource = dados.dresultados
+    KeyField = 'id'
+    ListField = 'padrao'
+    ListFieldIndex = 1
+    ListSource = dados.dqpd
     TabOrder = 10
+  end
+  object DBLookupComboBox2: TDBLookupComboBox
+    Left = 88
+    Top = 119
+    Width = 145
+    Height = 21
+    DataField = 'taf'
+    DataSource = dados.dresultados
+    KeyField = 'id'
+    ListField = 'ordem'
+    ListSource = dados.dqord
+    TabOrder = 11
+  end
+  object Edit1: TEdit
+    Left = 165
+    Top = 223
+    Width = 68
+    Height = 21
+    Alignment = taCenter
+    ReadOnly = True
+    TabOrder = 12
+  end
+  object Edit2: TEdit
+    Left = 165
+    Top = 249
+    Width = 68
+    Height = 21
+    Alignment = taCenter
+    ReadOnly = True
+    TabOrder = 13
+  end
+  object Edit3: TEdit
+    Left = 8
+    Top = 571
+    Width = 121
+    Height = 21
+    TabOrder = 14
+    Text = 'Edit3'
+  end
+  object Edit4: TEdit
+    Left = 112
+    Top = 640
+    Width = 121
+    Height = 21
+    TabOrder = 15
+    Text = 'Edit4'
+  end
+  object Edit5: TEdit
+    Left = 151
+    Top = 579
+    Width = 121
+    Height = 21
+    TabOrder = 16
+    Text = 'Edit5'
+  end
+  object StaticText1: TStaticText
+    Left = 200
+    Top = 282
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199'AO'
+    TabOrder = 17
+  end
+  object StaticText2: TStaticText
+    Left = 200
+    Top = 334
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199#195'O'
+    TabOrder = 18
+  end
+  object StaticText3: TStaticText
+    Left = 200
+    Top = 308
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199#195'O'
+    TabOrder = 19
+  end
+  object StaticText4: TStaticText
+    Left = 200
+    Top = 361
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199#195'O'
+    TabOrder = 20
+  end
+  object StaticText5: TStaticText
+    Left = 200
+    Top = 387
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199#195'O'
+    TabOrder = 21
+  end
+  object StaticText6: TStaticText
+    Left = 200
+    Top = 413
+    Width = 47
+    Height = 17
+    Caption = 'MEN'#199#195'O'
+    TabOrder = 22
   end
 end

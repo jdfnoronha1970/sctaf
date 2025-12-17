@@ -28,6 +28,8 @@ type
     DBEdit2: TDBEdit;
     Label6: TLabel;
     DBLookupComboBox4: TDBLookupComboBox;
+    DBLookupComboBox5: TDBLookupComboBox;
+    Label7: TLabel;
     procedure PngBitBtn2Click(Sender: TObject);
     procedure PngBitBtn1Click(Sender: TObject);
     procedure PngSpeedButton1Click(Sender: TObject);
@@ -72,6 +74,8 @@ begin
   dados.dqpd.Enabled:= true;
   dados.Tcadmil.Active:= false;
   dados.Dcadmil.Enabled:= false;
+  dados.qle.Active:= true;
+  dados.dle.Enabled:= true;
 
 end;
 

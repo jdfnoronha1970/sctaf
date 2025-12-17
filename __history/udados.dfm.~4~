@@ -1,0 +1,657 @@
+object dados: Tdados
+  OldCreateOrder = False
+  OnCreate = DataModuleCreate
+  Height = 579
+  Width = 743
+  object conn: TFDConnection
+    Params.Strings = (
+      'Database=C:\Program Files (x86)\SCTAF\dados\sctaf.mdb'
+      'DriverID=MSAcc')
+    Connected = True
+    LoginPrompt = False
+    Left = 352
+    Top = 8
+  end
+  object Tcaduser: TFDTable
+    IndexFieldNames = 'Id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbusuario'
+    TableName = 'tbusuario'
+    Left = 16
+    Top = 56
+    object TcaduserId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tcaduserusuario: TWideStringField
+      FieldName = 'usuario'
+      Origin = 'usuario'
+      Size = 30
+    end
+    object Tcaduseracesso: TIntegerField
+      FieldName = 'acesso'
+      Origin = 'acesso'
+    end
+    object Tcadusernacesso: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nacesso'
+      LookupDataSet = Tnacesso
+      LookupKeyFields = 'id'
+      LookupResultField = 'nivel'
+      KeyFields = 'acesso'
+      Lookup = True
+    end
+    object Tcadusersenha: TWideStringField
+      FieldName = 'senha'
+      Origin = 'senha'
+      Size = 100
+    end
+  end
+  object Dcaduser: TDataSource
+    AutoEdit = False
+    DataSet = Tcaduser
+    Enabled = False
+    Left = 72
+    Top = 56
+  end
+  object Tnacesso: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tnacesso'
+    TableName = 'tnacesso'
+    Left = 16
+    Top = 104
+    object Tnacessoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tnacessonivel: TWideStringField
+      FieldName = 'nivel'
+      Origin = 'nivel'
+      Size = 100
+    end
+  end
+  object Dacesso: TDataSource
+    AutoEdit = False
+    DataSet = Tnacesso
+    Enabled = False
+    Left = 72
+    Top = 104
+  end
+  object Tcadmil: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbmil'
+    TableName = 'tbmil'
+    Left = 16
+    Top = 152
+    object Tcadmilid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tcadmilnguerra: TWideStringField
+      FieldName = 'nguerra'
+      Origin = 'nguerra'
+      Size = 100
+    end
+    object Tcadmilpg: TSmallintField
+      FieldName = 'pg'
+      Origin = 'pg'
+      Visible = False
+    end
+    object Tcadmilsu: TSmallintField
+      FieldName = 'su'
+      Origin = 'su'
+    end
+    object Tcadmilgenero: TSmallintField
+      FieldName = 'genero'
+      Origin = 'genero'
+    end
+    object Tcadmilnpg: TStringField
+      FieldKind = fkLookup
+      FieldName = 'npg'
+      LookupDataSet = Tpg
+      LookupKeyFields = 'Id'
+      LookupResultField = 'pg'
+      KeyFields = 'pg'
+      Lookup = True
+    end
+    object Tcadmilnsu: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nsu'
+      LookupDataSet = Tsu
+      LookupKeyFields = 'id'
+      LookupResultField = 'su'
+      KeyFields = 'su'
+      Lookup = True
+    end
+    object Tcadmilngen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ngen'
+      LookupDataSet = Tgen
+      LookupKeyFields = 'id'
+      LookupResultField = 'genero'
+      KeyFields = 'genero'
+      Lookup = True
+    end
+    object Tcadmildn: TSQLTimeStampField
+      FieldName = 'dn'
+      Origin = 'dn'
+      EditMask = '!99/99/0000;1;_'
+    end
+    object Tcadmilpd: TSmallintField
+      FieldName = 'pd'
+      Origin = 'pd'
+    end
+    object Tcadmilnpd: TStringField
+      FieldKind = fkLookup
+      FieldName = 'npd'
+      LookupDataSet = qpd
+      LookupKeyFields = 'id'
+      LookupResultField = 'padrao'
+      KeyFields = 'pd'
+      Lookup = True
+    end
+  end
+  object Dcadmil: TDataSource
+    AutoEdit = False
+    DataSet = Tcadmil
+    Enabled = False
+    Left = 72
+    Top = 152
+  end
+  object Dpg: TDataSource
+    AutoEdit = False
+    DataSet = Tpg
+    Enabled = False
+    Left = 72
+    Top = 200
+  end
+  object Tpg: TFDTable
+    IndexFieldNames = 'Id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbpg'
+    TableName = 'tbpg'
+    Left = 16
+    Top = 200
+    object TpgId: TFDAutoIncField
+      FieldName = 'Id'
+      Origin = 'Id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tpgpg: TWideStringField
+      FieldName = 'pg'
+      Origin = 'pg'
+    end
+  end
+  object Tsu: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbsu'
+    TableName = 'tbsu'
+    Left = 16
+    Top = 248
+    object Tsuid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tsusu: TWideStringField
+      FieldName = 'su'
+      Origin = 'su'
+      Size = 50
+    end
+  end
+  object Dsu: TDataSource
+    AutoEdit = False
+    DataSet = Tsu
+    Enabled = False
+    Left = 72
+    Top = 248
+  end
+  object Dgen: TDataSource
+    AutoEdit = False
+    DataSet = Tgen
+    Enabled = False
+    Left = 72
+    Top = 296
+  end
+  object Tgen: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbgenero'
+    TableName = 'tbgenero'
+    Left = 16
+    Top = 296
+    object Tgenid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tgengenero: TWideStringField
+      FieldName = 'genero'
+      Origin = 'genero'
+      Size = 50
+    end
+  end
+  object Ttaf: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbtaf'
+    TableName = 'tbtaf'
+    Left = 16
+    Top = 341
+    object Ttafid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Ttafordtaf: TSmallintField
+      FieldName = 'ordtaf'
+      Origin = 'ordtaf'
+    end
+    object Ttafchamada: TSmallintField
+      FieldName = 'chamada'
+      Origin = 'chamada'
+    end
+    object Ttafdata: TSQLTimeStampField
+      FieldName = 'data'
+      Origin = 'data'
+    end
+    object Ttafano: TSmallintField
+      FieldName = 'ano'
+      Origin = 'ano'
+    end
+    object Ttafnord: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nord'
+      LookupDataSet = Tord
+      LookupKeyFields = 'id'
+      LookupResultField = 'ordem'
+      KeyFields = 'ordtaf'
+      Lookup = True
+    end
+    object Ttafnchamada: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nchamada'
+      LookupDataSet = Tchamada
+      LookupKeyFields = 'id'
+      LookupResultField = 'chamada'
+      KeyFields = 'chamada'
+      Lookup = True
+    end
+  end
+  object Dtaf: TDataSource
+    AutoEdit = False
+    DataSet = Ttaf
+    Enabled = False
+    Left = 72
+    Top = 341
+  end
+  object Tord: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbord'
+    TableName = 'tbord'
+    Left = 16
+    Top = 389
+    object Tordid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tordordem: TWideStringField
+      FieldName = 'ordem'
+      Origin = 'ordem'
+    end
+  end
+  object Tchamada: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbchamada'
+    TableName = 'tbchamada'
+    Left = 16
+    Top = 436
+    object Tchamadaid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tchamadachamada: TWideStringField
+      FieldName = 'chamada'
+      Origin = 'chamada'
+    end
+  end
+  object Dord: TDataSource
+    AutoEdit = False
+    DataSet = Tord
+    Enabled = False
+    Left = 72
+    Top = 389
+  end
+  object Dchamada: TDataSource
+    AutoEdit = False
+    DataSet = Tchamada
+    Enabled = False
+    Left = 72
+    Top = 436
+  end
+  object qmil: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbmil')
+    Left = 560
+    Top = 64
+    object qmilid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qmilnguerra: TWideStringField
+      FieldName = 'nguerra'
+      Origin = 'nguerra'
+      Size = 100
+    end
+    object qmilpg: TSmallintField
+      FieldName = 'pg'
+      Origin = 'pg'
+    end
+    object qmilsu: TSmallintField
+      FieldName = 'su'
+      Origin = 'su'
+    end
+    object qmilgenero: TSmallintField
+      FieldName = 'genero'
+      Origin = 'genero'
+    end
+    object qmildn: TSQLTimeStampField
+      FieldName = 'dn'
+      Origin = 'dn'
+    end
+    object qmilnpg: TStringField
+      FieldKind = fkLookup
+      FieldName = 'npg'
+      LookupDataSet = Tpg
+      LookupKeyFields = 'Id'
+      LookupResultField = 'pg'
+      KeyFields = 'pg'
+      Lookup = True
+    end
+    object qmilnsu: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nsu'
+      LookupDataSet = Tsu
+      LookupKeyFields = 'id'
+      LookupResultField = 'su'
+      KeyFields = 'su'
+      Lookup = True
+    end
+    object qmilngen: TStringField
+      FieldKind = fkLookup
+      FieldName = 'ngen'
+      LookupDataSet = Tgen
+      LookupKeyFields = 'id'
+      LookupResultField = 'genero'
+      KeyFields = 'genero'
+      Lookup = True
+    end
+    object qmilpd: TSmallintField
+      FieldName = 'pd'
+      Origin = 'pd'
+    end
+    object qmilnpd: TStringField
+      FieldKind = fkLookup
+      FieldName = 'npd'
+      LookupDataSet = qpd
+      LookupKeyFields = 'id'
+      LookupResultField = 'padrao'
+      KeyFields = 'pd'
+      Lookup = True
+    end
+  end
+  object dqmil: TDataSource
+    AutoEdit = False
+    DataSet = qmil
+    Enabled = False
+    Left = 616
+    Top = 64
+  end
+  object qord: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbord')
+    Left = 560
+    Top = 110
+  end
+  object qchamada: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbchamada')
+    Left = 560
+    Top = 158
+  end
+  object dqord: TDataSource
+    AutoEdit = False
+    DataSet = qord
+    Enabled = False
+    Left = 616
+    Top = 111
+  end
+  object dqchamada: TDataSource
+    AutoEdit = False
+    DataSet = qchamada
+    Enabled = False
+    Left = 617
+    Top = 158
+  end
+  object Tresutados: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tbresultados'
+    TableName = 'tbresultados'
+    Left = 16
+    Top = 486
+    object Tresutadosid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object Tresutadosmil: TSmallintField
+      FieldName = 'mil'
+      Origin = 'mil'
+    end
+    object Tresutadostaf: TSmallintField
+      FieldName = 'taf'
+      Origin = 'taf'
+    end
+    object Tresutadoschamada: TSmallintField
+      FieldName = 'chamada'
+      Origin = 'chamada'
+    end
+    object Tresutadoscorrida: TSmallintField
+      FieldName = 'corrida'
+      Origin = 'corrida'
+    end
+    object Tresutadosflexao: TSmallintField
+      FieldName = 'flexao'
+      Origin = 'flexao'
+    end
+    object Tresutadosabdominal: TSmallintField
+      FieldName = 'abdominal'
+      Origin = 'abdominal'
+    end
+    object Tresutadosbarra: TSmallintField
+      FieldName = 'barra'
+      Origin = 'barra'
+    end
+    object Tresutadosppm: TWideStringField
+      FieldName = 'ppm'
+      Origin = 'ppm'
+      Size = 50
+    end
+    object Tresutadosano: TWideStringField
+      FieldName = 'ano'
+      Origin = 'ano'
+      Size = 6
+    end
+    object Tresutadosmencao: TWideStringField
+      FieldName = 'mencao'
+      Origin = 'mencao'
+      Size = 10
+    end
+    object Tresutadosidade: TSmallintField
+      FieldName = 'idade'
+      Origin = 'idade'
+    end
+    object Tresutadospd: TSmallintField
+      FieldName = 'pd'
+      Origin = 'pd'
+    end
+    object Tresutadossu: TSmallintField
+      FieldName = 'su'
+      Origin = 'su'
+    end
+  end
+  object dresultados: TDataSource
+    AutoEdit = False
+    DataSet = Tresutados
+    Enabled = False
+    Left = 80
+    Top = 487
+  end
+  object qrelgeral: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbresultados')
+    Left = 560
+    Top = 205
+  end
+  object dqrelgeral: TDataSource
+    AutoEdit = False
+    DataSet = qrelgeral
+    Enabled = False
+    Left = 616
+    Top = 205
+  end
+  object tano: TFDTable
+    IndexFieldNames = 'id'
+    Connection = conn
+    UpdateOptions.UpdateTableName = 'tano'
+    TableName = 'tano'
+    Left = 136
+    Top = 56
+    object tanoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object tanoano: TWideStringField
+      FieldName = 'ano'
+      Origin = 'ano'
+      Size = 10
+    end
+  end
+  object dano: TDataSource
+    AutoEdit = False
+    DataSet = tano
+    Enabled = False
+    Left = 184
+    Top = 58
+  end
+  object qano: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tano')
+    Left = 560
+    Top = 264
+    object qanoid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qanoano: TWideStringField
+      DisplayWidth = 100
+      FieldName = 'ano'
+      Origin = 'ano'
+      Size = 60
+    end
+  end
+  object qpd: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbpd')
+    Left = 560
+    Top = 320
+    object qpdid: TFDAutoIncField
+      FieldName = 'id'
+      Origin = 'id'
+      ProviderFlags = [pfInWhere, pfInKey]
+      ReadOnly = True
+    end
+    object qpdpadrao: TWideStringField
+      FieldName = 'padrao'
+      Origin = 'padrao'
+      Size = 255
+    end
+  end
+  object dqano: TDataSource
+    AutoEdit = False
+    DataSet = qano
+    Enabled = False
+    Left = 608
+    Top = 264
+  end
+  object dqpd: TDataSource
+    AutoEdit = False
+    DataSet = qpd
+    Enabled = False
+    Left = 616
+    Top = 320
+  end
+  object qaltemil: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      ''
+      'select * from tbmil;')
+    Left = 560
+    Top = 376
+  end
+  object dqaltera: TDataSource
+    AutoEdit = False
+    DataSet = qaltemil
+    Enabled = False
+    OnUpdateData = dqalteraUpdateData
+    Left = 624
+    Top = 376
+  end
+  object dfaixaidade: TDataSource
+    AutoEdit = False
+    DataSet = qfaixaidade
+    Enabled = False
+    Left = 624
+    Top = 432
+  end
+  object qfaixaidade: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbfaixaetaria')
+    Left = 552
+    Top = 432
+  end
+end

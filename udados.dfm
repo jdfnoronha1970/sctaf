@@ -1,7 +1,7 @@
 object dados: Tdados
   OldCreateOrder = False
   OnCreate = DataModuleCreate
-  Height = 579
+  Height = 726
   Width = 743
   object conn: TFDConnection
     Params.Strings = (
@@ -351,7 +351,7 @@ object dados: Tdados
   object qmil: TFDQuery
     Connection = conn
     SQL.Strings = (
-      'select * from tbmil')
+      'select * from tbmil where situacao=0')
     Left = 560
     Top = 64
     object qmilid: TFDAutoIncField
@@ -419,6 +419,19 @@ object dados: Tdados
       LookupKeyFields = 'id'
       LookupResultField = 'padrao'
       KeyFields = 'pd'
+      Lookup = True
+    end
+    object qmille: TSmallintField
+      FieldName = 'le'
+      Origin = 'le'
+    end
+    object qmilnle: TStringField
+      FieldKind = fkLookup
+      FieldName = 'nle'
+      LookupDataSet = qle
+      LookupKeyFields = 'id'
+      LookupResultField = 'lensino'
+      KeyFields = 'le'
       Lookup = True
     end
   end
@@ -498,28 +511,32 @@ object dados: Tdados
       FieldName = 'barra'
       Origin = 'barra'
     end
-    object Tresutadosano: TWideStringField
-      FieldName = 'ano'
-      Origin = 'ano'
-      Size = 6
-    end
-    object Tresutadossu: TSmallintField
-      FieldName = 'su'
-      Origin = 'su'
-    end
     object Tresutadosppm: TWideStringField
       FieldName = 'ppm'
       Origin = 'ppm'
       Size = 50
+    end
+    object Tresutadosano: TWideStringField
+      FieldName = 'ano'
+      Origin = 'ano'
+      Size = 6
     end
     object Tresutadosmencao: TWideStringField
       FieldName = 'mencao'
       Origin = 'mencao'
       Size = 10
     end
-    object Tresutadospd: TWideStringField
+    object Tresutadosidade: TSmallintField
+      FieldName = 'idade'
+      Origin = 'idade'
+    end
+    object Tresutadospd: TSmallintField
       FieldName = 'pd'
       Origin = 'pd'
+    end
+    object Tresutadossu: TSmallintField
+      FieldName = 'su'
+      Origin = 'su'
     end
   end
   object dresultados: TDataSource
@@ -617,7 +634,7 @@ object dados: Tdados
     AutoEdit = False
     DataSet = qpd
     Enabled = False
-    Left = 616
+    Left = 624
     Top = 320
   end
   object qaltemil: TFDQuery
@@ -641,13 +658,55 @@ object dados: Tdados
     DataSet = qfaixaidade
     Enabled = False
     Left = 624
-    Top = 432
+    Top = 424
   end
   object qfaixaidade: TFDQuery
     Connection = conn
     SQL.Strings = (
       'select * from tbfaixaetaria')
+    Left = 560
+    Top = 424
+  end
+  object qle: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tble')
+    Left = 560
+    Top = 472
+  end
+  object dle: TDataSource
+    AutoEdit = False
+    DataSet = qle
+    Enabled = False
+    Left = 624
+    Top = 472
+  end
+  object dcorrida: TDataSource
+    AutoEdit = False
+    DataSet = qcorrida
+    Enabled = False
+    Left = 624
+    Top = 528
+  end
+  object qcorrida: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbcorrida ')
+    Left = 560
+    Top = 528
+  end
+  object dmencao: TDataSource
+    AutoEdit = False
+    DataSet = qmencao
+    Enabled = False
+    Left = 616
+    Top = 584
+  end
+  object qmencao: TFDQuery
+    Connection = conn
+    SQL.Strings = (
+      'select * from tbmencoes')
     Left = 552
-    Top = 432
+    Top = 584
   end
 end

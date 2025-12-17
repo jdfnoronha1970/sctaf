@@ -34,7 +34,7 @@ object Fcadmil: TFcadmil
     ParentFont = False
   end
   object Label2: TLabel
-    Left = 134
+    Left = 135
     Top = 104
     Width = 21
     Height = 13
@@ -47,7 +47,7 @@ object Fcadmil: TFcadmil
     ParentFont = False
   end
   object Label3: TLabel
-    Left = 210
+    Left = 208
     Top = 104
     Width = 15
     Height = 13
@@ -60,7 +60,7 @@ object Fcadmil: TFcadmil
     ParentFont = False
   end
   object Label4: TLabel
-    Left = 296
+    Left = 293
     Top = 104
     Width = 43
     Height = 13
@@ -73,7 +73,7 @@ object Fcadmil: TFcadmil
     ParentFont = False
   end
   object Label5: TLabel
-    Left = 399
+    Left = 377
     Top = 104
     Width = 47
     Height = 13
@@ -87,11 +87,24 @@ object Fcadmil: TFcadmil
     ParentFont = False
   end
   object Label6: TLabel
-    Left = 488
+    Left = 453
     Top = 104
     Width = 15
     Height = 13
     Caption = 'PD'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label7: TLabel
+    Left = 513
+    Top = 104
+    Width = 49
+    Height = 13
+    Caption = 'L ENSINO'
     Font.Charset = DEFAULT_CHARSET
     Font.Color = clWindowText
     Font.Height = -11
@@ -6752,7 +6765,7 @@ object Fcadmil: TFcadmil
     TabOrder = 2
   end
   object DBLookupComboBox2: TDBLookupComboBox
-    Left = 210
+    Left = 209
     Top = 120
     Width = 80
     Height = 21
@@ -6764,9 +6777,9 @@ object Fcadmil: TFcadmil
     TabOrder = 3
   end
   object DBLookupComboBox3: TDBLookupComboBox
-    Left = 296
+    Left = 293
     Top = 120
-    Width = 97
+    Width = 80
     Height = 21
     DataField = 'genero'
     DataSource = dados.Dcadmil
@@ -6804,7 +6817,7 @@ object Fcadmil: TFcadmil
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 150
+        Width = 140
         Visible = True
       end
       item
@@ -6843,7 +6856,7 @@ object Fcadmil: TFcadmil
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 95
+        Width = 80
         Visible = True
       end
       item
@@ -6856,7 +6869,7 @@ object Fcadmil: TFcadmil
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 85
+        Width = 75
         Visible = True
       end
       item
@@ -6869,14 +6882,27 @@ object Fcadmil: TFcadmil
         Title.Font.Height = -11
         Title.Font.Name = 'Tahoma'
         Title.Font.Style = [fsBold]
-        Width = 60
+        Width = 50
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'nle'
+        Title.Alignment = taCenter
+        Title.Caption = 'L ENS'
+        Title.Font.Charset = DEFAULT_CHARSET
+        Title.Font.Color = clWindowText
+        Title.Font.Height = -11
+        Title.Font.Name = 'Tahoma'
+        Title.Font.Style = [fsBold]
+        Width = 50
         Visible = True
       end>
   end
   object DBEdit2: TDBEdit
-    Left = 399
+    Left = 378
     Top = 120
-    Width = 80
+    Width = 70
     Height = 21
     DataField = 'dn'
     DataSource = dados.Dcadmil
@@ -6884,9 +6910,9 @@ object Fcadmil: TFcadmil
     OnExit = DBEdit2Exit
   end
   object DBLookupComboBox4: TDBLookupComboBox
-    Left = 487
+    Left = 452
     Top = 120
-    Width = 86
+    Width = 55
     Height = 21
     DataField = 'pd'
     DataSource = dados.Dcadmil
@@ -6894,5 +6920,15 @@ object Fcadmil: TFcadmil
     ListField = 'padrao'
     ListSource = dados.dqpd
     TabOrder = 7
+  end
+  object DBLookupComboBox5: TDBLookupComboBox
+    Left = 512
+    Top = 120
+    Width = 60
+    Height = 21
+    KeyField = 'id'
+    ListField = 'lensino'
+    ListSource = dados.dle
+    TabOrder = 8
   end
 end
